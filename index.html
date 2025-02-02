@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Letter</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-image: url('https://img.freepik.com/premium-vector/seamless-pattern-with-teddy-bear-hearts-festive-pattern-suitable-postcards-backgrounds-books-posters-vector-illustration_174639-30238.jpg'); /* Replace with your image URL */
+            background-size: cover; /* Ensures the image covers the entire background */
+            background-position: center; /* Centers the image */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+            margin: 0;
+            height: 100vh; /* Ensures the body takes up the full viewport height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="envelope-container">
+        <div class="envelope" onclick="toggleLetter()">
+            <div class="envelope-flap"></div>
+            <div class="wax-seal"></div>
+        </div>
+
+        <div class="letter-container" id="letterContainer">
+            <div class="letter-paper" id="letterPaper">
+                <div class="letter-content">
+                    <h2>wassup cutie,</h2>
+                    <p>you know i 1% love you yk so had to ask you to be my valentines to continue the rest of the 99% 😉😉. SO will you be my valentines 🫶 </p>
+                    <p>Your amazing future husband me.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
