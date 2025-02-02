@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            background-image: url('https://img.freepik.com/premium-vector/seamless-pattern-with-teddy-bear-hearts-festive-pattern-suitable-postcards-backgrounds-books-posters-vector-illustration_174639-30238.jpg'); /* Replace with your image URL */
+            background-image: url('https://img.freepik.com/premium-vector/seamless-pattern-with-teddy-bear-hearts-festive-pattern-suitable-postcards-backgrounds-books-posters-vector-illustration_174639-30238.jpg'); 
             background-size: cover; 
             background-position: center; 
             background-repeat: no-repeat; 
@@ -23,20 +23,45 @@
     <div class="envelope-container">
         <div class="envelope" onclick="toggleLetter()">
             <div class="envelope-flap"></div>
-            <div class="wax-seal"></div>
+            <div class="wax-seal" id="waxSeal"></div>
         </div>
 
         <div class="letter-container" id="letterContainer">
             <div class="letter-paper" id="letterPaper">
                 <div class="letter-content">
                     <h2>wassup cutie,</h2>
-                    <p>Will you be my valentines or will you be my valentines (anything other than that doesnt exist sorry)</p>
-                    <p>Your amazing future husband who loves you  me.</p>
+                    <p>Will you be my valentines or will you be my valentines (anything other than that doesn't exist sorry)</p>
+                    <p>Your amazing future husband who loves you, me.</p>
+                </div>
+                <div class="button-container">
+                    <button onclick="redirect()">Yes</button>
+                    <button onclick="redirect()">No</button>
                 </div>
             </div>
         </div>
     </div>
 
     <script src="script.js"></script>
+    <script>
+        function toggleLetter() {
+            const envelope = document.querySelector('.envelope');
+            const letterContainer = document.getElementById('letterContainer');
+            const waxSeal = document.getElementById('waxSeal');
+
+            isOpen = !isOpen;
+            envelope.classList.toggle('open', isOpen);
+            letterContainer.classList.toggle('visible', isOpen);
+
+            if (isOpen) {
+                waxSeal.style.display = 'none';
+            } else {
+                waxSeal.style.display = 'block';
+            }
+        }
+
+        function redirect() {
+            window.location.href = 'https://your-link-here.com'; // Replace with your desired link
+        }
+    </script>
 </body>
 </html>
